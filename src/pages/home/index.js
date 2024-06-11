@@ -6,13 +6,13 @@ function Home() {
             <h2>Home</h2>
             <ul> 
                 <li>
-                    <NavLink to={"/home"}> 钱包登录 </NavLink>
+                    <NavLink to={"/home"}> 首页 </NavLink>
                 </li>
                 <li>
-                    <NavLink to={"/home"}> 签名操作 </NavLink>
+                    <NavLink to={"/wallet"}> 钱包登录 </NavLink>
                 </li>
                 <li>
-                    <NavLink to={"/home"}> 发送交易 </NavLink>
+                    <NavLink to={"/Wallet"}> 发送交易 </NavLink>
                 </li>
             </ul>
         </div>
