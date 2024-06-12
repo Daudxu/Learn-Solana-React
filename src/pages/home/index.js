@@ -12,7 +12,7 @@ function Home() {
                     <NavLink to={"/wallet"}> 钱包登录 </NavLink>
                 </li>
                 <li>
-                    <NavLink to={"/Wallet"}> 发送交易 </NavLink>
+                    <NavLink to={"/transaction"}> 发送交易 </NavLink>
                 </li>
             </ul>
         </div>

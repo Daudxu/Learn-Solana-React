@@ -1,5 +1,6 @@
 import Home from '../pages/home/index'
 import Wallet from '../pages/wallet/index'
+import Transaction from '../pages/Transaction/index'
 
 const router = [
   { path: '/', element: <Home /> },
@@ -10,6 +11,10 @@ const router = [
   {
     path: '/wallet',
     element: <Wallet />
+  },
+  {
+    path: '/transaction',
+    element: <Transaction />
   }
 ]
 
