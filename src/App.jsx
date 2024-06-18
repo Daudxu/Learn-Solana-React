@@ -18,8 +18,8 @@ function App() {
 
   return (
     <>
-      <ConnectionProvider endpoint={endpoint}>
-        <WalletProvider wallets={[wallet]}>
+      <ConnectionProvider endpoint={endpoint} >
+        <WalletProvider wallets={[wallet]} autoConnect>
           <WalletModalProvider>{routeElement}</WalletModalProvider>
         </WalletProvider>
       </ConnectionProvider>
