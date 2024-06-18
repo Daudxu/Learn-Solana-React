@@ -1,20 +1,26 @@
 import { useEffect } from 'react';  
-import { useWallet } from '@solana/wallet-adapter-react';  
+// import { useWallet } from '@solana/wallet-adapter-react';  
 import { WalletMultiButton, WalletDisconnectButton } from "@solana/wallet-adapter-react-ui";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 function Wallet() {
-    // const { wallet, publicKey } = useWallet();  
+    const { wallet, publicKey } = useWallet();  
 
-    // if (!wallet || !wallet.connected || !publicKey) {  
-    //     return <div>Wallet not connected or not available</div>;  
-    // }  
-    
+    if (!wallet && !publicKey) {  
+        return  (
+            <div> 
+                <h2> Wallet </h2>
+                <WalletMultiButton />
+             </div>
+        );  
+    } 
     return (
         <div> 
             <h2> Wallet </h2>
-            <p>Connected Wallet Public Key:</p>  
-            <WalletMultiButton />
+            <p>Connected Wallet Public Key: {publicKey?.toBase58()}</p>  
+            <div> 
             <WalletDisconnectButton />
+            </div>
          </div>
     )
 }
