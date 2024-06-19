@@ -2,6 +2,7 @@ import { defineConfig, transformWithEsbuild,loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 // import { fileURLToPath, URL } from 'node:url'
 import { resolve } from 'path'  
+import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
 
 // https://vitejs.dev/config/
 export default ({ mode }) =>{
@@ -45,6 +46,14 @@ export default ({ mode }) =>{
         loader: {
           '.js': 'jsx',
         },
+        define: {
+          global: 'globalThis'
+        },
+        plugins: [
+          NodeGlobalsPolyfillPlugin({
+              buffer: true
+          })
+        ]
       },
     },
     // End workaround

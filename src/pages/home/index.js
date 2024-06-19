@@ -12,7 +12,16 @@ function Home() {
                     <NavLink to={"/wallet"}> 钱包登录 </NavLink>
                 </li>
                 <li>
+                    <NavLink to={"/airdrop"}> 空投 </NavLink>
+                </li>
+                <li>
                     <NavLink to={"/transaction"}> 发送交易 </NavLink>
+                </li>
+                <li>
+                    <NavLink to={"/transferToken"}> 发送Token </NavLink>
+                </li>
+                <li>
+                    <NavLink to={"/test"}> test </NavLink>
                 </li>
             </ul>
         </div>
