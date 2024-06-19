@@ -1,6 +1,7 @@
 import Home from '../pages/home/index'
 import Wallet from '../pages/wallet'
 import Transaction from '../pages/transaction'
+import Airdrop from '../pages/airdrop'
 
 const router = [
   { path: '/', element: <Home /> },
@@ -15,6 +16,10 @@ const router = [
   {
     path: '/transaction',
     element: <Transaction />
+  },
+  {
+    path: '/airdrop',
+    element: <Airdrop />
   }
 ]
 
