@@ -9,9 +9,8 @@ function Test() {
    }
 
    const handleClickCheckPublicKey = () => {
-    const key = new PublicKey("HrJ27zbSXPWvMHaFkVTb4GpS9qfAc2SfQUAKwrrUPQpV");
-    console.log(PublicKey.isOnCurve(key.toBytes()));
-
+        const key = new PublicKey("HrJ27zbSXPWvMHaFkVTb4GpS9qfAc2SfQUAKwrrUPQpV");
+        console.log(PublicKey.isOnCurve(key.toBytes()));
    }
 
    return (
